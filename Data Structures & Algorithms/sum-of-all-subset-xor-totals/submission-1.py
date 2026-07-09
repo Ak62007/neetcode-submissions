@@ -1,0 +1,8 @@
+class Solution:
+    def subsetXORSum(self, nums: List[int]) -> int:
+        
+        res = 0
+        for num in nums:
+            res = res | num
+
+        return res * 2**(len(nums)-1)
